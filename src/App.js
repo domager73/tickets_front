@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import TicketsApiWorker from "./api/TicketsApiWorker";
-import {Table} from "antd";
+import {Table, Dropdown} from "antd";
 import {DeleteOutlined} from "@ant-design/icons";
 
 const App = () => {
@@ -65,6 +65,10 @@ const App = () => {
     return (
         <div>
             <Table dataSource={tickets} columns={columns}/>
+            <div>
+                <input type='text'/>
+                <Dropdown/>
+            </div>
         </div>
     );
 };
