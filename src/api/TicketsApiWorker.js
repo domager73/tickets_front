@@ -14,7 +14,11 @@ class TicketsApiWorker {
     }
 
     async deleteTicketsByID(id) {
-        return await this.#axios.delete(`/delete${id}`);
+        return await this.#axios.delete(`delete/${id}`);
+    }
+
+    async addNewTicket(ticket) {
+        return await this.#axios.post(`add`, ticket);
     }
 }
 
