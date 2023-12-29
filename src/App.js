@@ -91,13 +91,12 @@ const App = () => {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
             autoComplete="off"
-            marg
         >
             <text>Введите свои данные</text>
             <Form.Item
                 name="name"
                 label="Name"
-                rules={[{required: true}, {type: 'string', min: 3}]}
+                rules={[{required: true}, {type: 'string', min :3}]}
             >
                 <Input placeholder="input placeholder"/>
             </Form.Item>
