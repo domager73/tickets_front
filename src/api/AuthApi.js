@@ -9,12 +9,12 @@ class AuthApi {
         });
     }
 
-    async login(email) {
-        return await this.#axios.post(`login?email=${email}`);
+    async login(user) {
+        return await this.#axios.post(`login`, user);
     }
 
-    async verifyLogin(email, code) {
-        return await this.#axios.post(`verify-login?email=${email}&code=${code}`);
+    async verifyLogin(userWithCode) {
+        return await this.#axios.post(`verify-login`, userWithCode);
     }
 }
 
