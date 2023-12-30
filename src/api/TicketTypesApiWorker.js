@@ -10,15 +10,14 @@ class TicketTypesApiWorker {
 
         this.#axios = axios.create({
             baseURL: "http://localhost:5151/ticket-types/",
-        });
-    }
-
-    async getAllTicketTypes() {
-        return await this.#axios.get("get-all", {
             headers: {
                 "Authorization": "Bearer " + this.localSoragess.get('jwt')
             }
         });
+    }
+
+    async getAllTicketTypes() {
+        return await this.#axios.get("get-all");
     }
 }
 

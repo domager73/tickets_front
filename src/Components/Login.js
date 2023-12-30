@@ -4,7 +4,6 @@ import {Button, message} from "antd";
 import AuthApi from "../api/AuthApi";
 import UserWithCodeModel from "../Models/UserWithCodeModel";
 import UserModel from "../Models/User";
-import localStorage from "../Repository/localStorage";
 import LocalStorage from "../Repository/localStorage";
 
 const Login = () => {
