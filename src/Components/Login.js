@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {useNavigate} from "react-router-dom";
-import {Button, Form} from "antd";
+import {Button, Form, message} from "antd";
 import AuthApi from "../api/AuthApi";
 
 const Login = () => {
@@ -30,7 +30,9 @@ const Login = () => {
                     navigate('main', {replace: false});
 
                 } catch (e) {
-                    setCode('')
+                    setCode('');
+
+                    message.error('неверный код');
                 }
             }}>login/auth</Button>
         </div>
